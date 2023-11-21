@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker</title>
+    <style>
+      @page {
+          size: A4;
+          margin: 1.4cm; /* Set equal margins for all sides on every page */
+      }
+  
+      body {
+          margin: 0; /* Remove the body margin to avoid additional space */
+      }
+  
+      table {
+          width: 100%;
+          font-size: 11px;
+      }
+  
+      td {
+          width: 6.4cm;
+          height: 3.8cm;
+      }
+  
+      td div {
+          margin-left: 0px;
+          margin-top: 0px;
+      }
+  
+      td div:first-child {
+          font-size: 12px;
+      }
+  
+      @media print {
+          table {
+              page-break-inside: auto;
+          }
+  
+          td {
+              page-break-inside: avoid;
+          }
+      }
+  </style>
+  
+</head>
+<body>
+    <table align="center" cellpadding="0" cellspacing="0" border="0">
+        {% for rs in data %}
+            {% if loop.index0 % 3 == 0 %}<tr>{% endif %}
+            <td align="center">
+                <div>
+                    <div><strong>{{ rs.shop_name | capitalize }}</strong></div>
+                    <div>{{ rs.address }}</div>
+                    <div>
+                        Mob:&nbsp;{{ rs.mobile_no1 | upper }}
+                        {% if rs.mobile_no2 is defined %}
+                            - {{ rs.mobile_no2 | upper }}                
+                        {% endif %}
+                    </div>
+                </div>
+            </td>
+            {% if (loop.index0 + 1) % 3 == 0 or loop.last %}</tr>{% endif %}
+            
+        {% endfor %}
+    </table>
+</body>
+</html>
