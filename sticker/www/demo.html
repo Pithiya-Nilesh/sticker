@@ -51,11 +51,11 @@
             {% if loop.index0 % 3 == 0 %}<tr>{% endif %}
             <td align="center">
                 <div>
-                    <div><strong>{{ rs.shop_name | capitalize }}</strong></div>
+                    <div><strong>{{ rs.shop_name }}</strong></div>
                     <div>{{ rs.address }}</div>
                     <div>
                         Mob:&nbsp;{{ rs.mobile_no1 | upper }}
-                        {% if rs.mobile_no2 is defined %}
+                        {% if rs.mobile_no2 != none %}
                             - {{ rs.mobile_no2 | upper }}                
                         {% endif %}
                     </div>
