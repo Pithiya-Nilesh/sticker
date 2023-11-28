@@ -14,7 +14,6 @@ function show_toggle_sending_button(list_view) {
             method: 'sticker.api.delete_all_sticker',
             callback: function (r) {
                 if (r.message) {
-                    frappe.msgprint(__('Stickers deleted successfully.'));
                     // Refresh the list view after deletion
                     list_view.refresh();
                 }
