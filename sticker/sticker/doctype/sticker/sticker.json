@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "shop_name",
+  "shop_no",
   "address",
   "mobile_no1",
   "mobile_no2"
@@ -33,11 +34,16 @@
    "fieldname": "mobile_no2",
    "fieldtype": "Data",
    "label": "Mobile No2."
+  },
+  {
+   "fieldname": "shop_no",
+   "fieldtype": "Data",
+   "label": "Shop No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-31 13:23:47.049577",
+ "modified": "2023-11-28 10:29:26.613878",
  "modified_by": "Administrator",
  "module": "Sticker",
  "name": "sticker",

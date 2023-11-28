@@ -52,9 +52,15 @@
             <td align="center">
                 <div>
                     <div><strong>{{ rs.shop_name }}</strong></div>
+                    {% if rs.shop_no != none %}
+                        <div>{{ rs.shop_no | upper }}</div>
+                        {% endif %}
                     <div>{{ rs.address }}</div>
                     <div>
-                        Mob:&nbsp;{{ rs.mobile_no1 | upper }}
+                        {% if rs.mobile_no1 != none %}
+                        Mob:&nbsp; {{ rs.mobile_no1 | upper }}                
+                        {% endif %}
+                        
                         {% if rs.mobile_no2 != none %}
                             - {{ rs.mobile_no2 | upper }}                
                         {% endif %}
