@@ -6,4 +6,4 @@ def get_context(context):
 	# 	frappe.local.flags.redirect_location = "/"
 	# 	raise frappe.Redirect
 	
-    context.data = frappe.db.get_list("sticker", fields=["*"], page_length=40000)
+    context.data = frappe.db.get_list("sticker", fields=["*"], page_length=40000, order_by='city ASC')

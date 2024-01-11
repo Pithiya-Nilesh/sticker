@@ -9,9 +9,13 @@
  "engine": "InnoDB",
  "field_order": [
   "shop_name",
-  "shop_no",
   "address",
-  "mobile_no1",
+  "address2",
+  "address3",
+  "city",
+  "taluka",
+  "district",
+  "pincode",
   "mobile_no2"
  ],
  "fields": [
@@ -26,24 +30,44 @@
    "label": "Address"
   },
   {
-   "fieldname": "mobile_no1",
-   "fieldtype": "Data",
-   "label": "Mobile No1."
-  },
-  {
    "fieldname": "mobile_no2",
    "fieldtype": "Data",
    "label": "Mobile No2."
   },
   {
-   "fieldname": "shop_no",
+   "fieldname": "address2",
    "fieldtype": "Data",
-   "label": "Shop No"
+   "label": "Address2"
+  },
+  {
+   "fieldname": "address3",
+   "fieldtype": "Data",
+   "label": "Address3"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Data",
+   "label": "Taluka"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-28 10:29:26.613878",
+ "modified": "2024-01-10 19:23:36.156300",
  "modified_by": "Administrator",
  "module": "Sticker",
  "name": "sticker",
